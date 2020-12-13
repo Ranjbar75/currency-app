@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {CodeToFlag,PersianGoldName} from "./constants";
-import Currency from "./Currency.js";
+import Currency from './Currency.js';
 import WatingApi from './WatingApi.js';
 
-const Gold = () => {
-    const [Golds,setGolds] = useState([]);
 
-    const ApiUrl = "https://currency.jafari.li/json2";
+const Gold = () => {
+    const [Items,setItems] = useState([]);
+
+    const ApiUrl = "https://currency.jafari.li/json";
 
     useEffect(() => {
         axios({
@@ -15,31 +16,32 @@ const Gold = () => {
             url: ApiUrl
         })
             .then(response => {
-                setGolds(response.data.Gold);
+                setItems(response.data.Item);
             })
             .catch(error => console.log(error));
     }, []);
 
     useEffect(() => {
-        console.log(Golds);
+        console.log(2222);
+        console.log(Items);
 
-    }, [Golds]);
+    }, [Items]);
 
     return (
         <div className="cards-main">
-            <h3 className="heading_title">قیمت سکه :</h3>
+            <h3 className="heading_title">قیمت فلزات گران بها :</h3>
             {
-                Golds.length === 0 ? (
+                Items.length === 0 ? (
                     <WatingApi />
                 ) : (
-                  Golds.map((Gold, index) => {
+                    Items.map((Item, index) => {
                     return(
                       <Currency
                       index={index} 
-                      currency_buy={Gold.Buy} 
-                      currency_sell={Gold.Sell} 
-                      courency_code={PersianGoldName[Gold.Coin]}
-                      courency_flag={CodeToFlag[Gold.Coin]}
+                      currency_buy={Item.Rate} 
+                      currency_sell={Item.Rate} 
+                      courency_code={PersianGoldName[Item.Name]}
+                      courency_flag={CodeToFlag[Item.Name]}
                       />
                     )
                   })

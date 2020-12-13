@@ -62,6 +62,11 @@ const CodeToFlag = {
     '1 Emami' : "us",
     '1/2 Azadi' : "us",
     '1/4 Azadi' : "us",
+    'Ounce' : "us",
+    'Mithqal' : "us",
+    "Gold 18" : "us",
+    "Bitcoin" : "us",
+    "Bourse" : "us"
 }
 
 const PersianGoldName =  {
@@ -69,6 +74,11 @@ const PersianGoldName =  {
     '1 Emami' : "سکه امامی",
     '1/2 Azadi' : "نیم سکه آزادی",
     '1/4 Azadi' : "ربع سکه بهار آزادی",
+    'Ounce' : "انس",
+    'Mithqal' : "مثقال",
+    "Gold 18" : "طلای ۱۸ عیار",
+    "Bitcoin" : "بیت کوین",
+    "Bourse" : "بورس"
 }
 
 export {

@@ -191,3 +191,34 @@ h5.currency-code {
 .test{
   color: #E2E2E2;
 }
+
+/* loading componet */
+
+.card-rtl .currency-loading {
+  color: #fff;
+  direction: rtl;
+}
+
+/* LastUpdate */
+
+.box-absolute {
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  background: #fbbf0f;
+}
+
+.box-absolute p {
+  direction: rtl;
+  text-align: right;
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+span.inline-datetime {
+  direction: ltr !important;
+  text-align: left;
+  display: inline-block;
+  padding-right: 4px;
+}
