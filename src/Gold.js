@@ -7,7 +7,7 @@ import WatingApi from './WatingApi.js';
 const Gold = () => {
     const [Golds,setGolds] = useState([]);
 
-    const ApiUrl = "https://currency.jafari.li/json2";
+    const ApiUrl = "https://currency.jafari.li/json";
 
     useEffect(() => {
         axios({
@@ -17,11 +17,13 @@ const Gold = () => {
             .then(response => {
                 setGolds(response.data.Gold);
             })
-            .catch(error => console.log(error));
+            .catch(
+                //error => console.log(error)
+            );
     }, []);
 
     useEffect(() => {
-        console.log(Golds);
+        //console.log(Golds);
 
     }, [Golds]);
 

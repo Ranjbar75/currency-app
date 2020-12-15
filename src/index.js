@@ -6,6 +6,7 @@ import App from './App.js';
 import Gold from './Gold.js';
 import Item from './Item.js';
 import LastUpdate from './LastUpdate.js';
+import Footer from './Footer.js';
 
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
           <Gold />
           <Item />
           <LastUpdate />
+          <Footer />
       </div>
   </React.StrictMode>,
   document.getElementById('root')

@@ -18,13 +18,13 @@ const Gold = () => {
             .then(response => {
                 setItems(response.data.Item);
             })
-            .catch(error => console.log(error));
+            .catch(
+                //error => console.log(error)
+            );
     }, []);
 
     useEffect(() => {
-        console.log(2222);
-        console.log(Items);
-
+        //console.log(Items);
     }, [Items]);
 
     return (

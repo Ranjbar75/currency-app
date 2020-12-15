@@ -2,7 +2,7 @@ import React from "react";
 
 function Currency(props) {
     return(
-        <div className="card" key={props.id}>
+        <div className="card" key={props.index}>
           <div className="card-body d-flex justify-content-between">
             <div className="card-buy-sell">
               <h5 className="card-buy"><span> فروش : </span>  <b>{props.currency_buy}</b></h5>
@@ -13,9 +13,9 @@ function Currency(props) {
               <img
                 className="ml-3"
                 src={`${window.location.origin}/flags/${props.courency_flag}.png`}
-                width="16"
-                height="12"
-                alt="South Africa"
+                width="34"
+                height="24"
+                alt={props.courency_code}
               />
             </div>
           </div>

@@ -17,12 +17,13 @@ const App = () => {
     .then(response => {
       setCurrencies(response.data.Currency);
     })
-    .catch(error => console.log(error));
+    .catch(
+      //error => console.log(error)
+    );
   }, []);
 
   useEffect(() => {
-    console.log(currencies.length);
-  
+    //console.log(currencies.length);
   }, [currencies]);
 
   return (
